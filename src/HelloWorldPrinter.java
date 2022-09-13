@@ -12,6 +12,8 @@ public class HelloWorldPrinter {
             case "Monday":
                 System.out.println("Working day");
                 break;
+            case "Saturday":
+                System.out.println("Holiday");
         }
     }
 }
