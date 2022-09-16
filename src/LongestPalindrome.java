@@ -5,12 +5,12 @@ public class LongestPalindrome {
         String str;
         Scanner sc=new Scanner(System.in);
         str=sc.nextLine();
-        int n=str.length(); //17
+        int n=str.length();
         int[] start=new int[n];
         int[] end=new int[n];
         int index=0;
         for (int i=0;i<n;i++){
-            for (int j=i+1;j<n;j++){
+            for (int j=n-1;j>i;j--){
                 int k=i, l=j;
                 boolean Palindrome=true;
                 while(k<l){
