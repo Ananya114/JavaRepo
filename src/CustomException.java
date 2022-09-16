@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CustomException {
@@ -21,6 +22,9 @@ public class CustomException {
             checkAge(age);
             if (age>18)
                 System.out.println("Adult!");
+        }
+        catch (InputMismatchException e){
+            System.out.println("Enter a valid number");
         }
         catch(Exception e){
             System.out.println("Exception encountered - "+e);
