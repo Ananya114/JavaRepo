@@ -12,8 +12,6 @@ class BrowserHistory{
         currentIndex++;
         if(currentIndex!=(History.size()-1)){
             History.subList(currentIndex+1, History.size()).clear();
-//            for (int i=(History.size()-1);i>currentIndex;i--)
-//                History.remove(i);
             System.out.println(History);
         }
         System.out.println("You've moved to "+URL+" - null");

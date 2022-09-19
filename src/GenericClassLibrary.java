@@ -23,7 +23,7 @@ class LibraryElement <T>{
     }
 }
 
-//String-Book title, int-video number, char-newspaper
+//String-Book title, 1-video number, 'P'-newspaper
 public class GenericClassLibrary {
     public static void main(String[] args) {
         LibraryElement<String> item1=new LibraryElement<>();
