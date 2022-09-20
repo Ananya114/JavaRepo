@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,23 +15,9 @@ enum Color {
 class MysteryColorFinder implements MysteryColorAnalyzer{
     @Override
     public int numberOfDistinctColors(List<Color> mysteryColors) {
-        boolean R=false, G=false, B=false;
-        for (Color c: mysteryColors){
-            if (c.equals(Color.RED))
-                R=true;
-            else if (c.equals(Color.GREEN))
-                G=true;
-            else if (c.equals(Color.BlUE))
-                B=true;
-        }
-        int distinctColors=0;
-        if (R)
-            distinctColors++;
-        if (G)
-            distinctColors++;
-        if (B)
-            distinctColors++;
-        return distinctColors;
+
+        HashSet<Color> mysterycolorsHash=new HashSet<>(mysteryColors);
+        return (mysterycolorsHash.size());
     }
 
     @Override

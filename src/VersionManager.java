@@ -25,11 +25,17 @@ class VersionManagerClass{
     }
     public void major(){
         prevMajor=major;
+        prevMinor=minor;
+        prevPatch=patch;
         major++;
+        minor=0;
+        patch=0;
     }
     public void minor(){
         prevMinor=minor;
+        prevPatch=patch;
         minor++;
+        patch=0;
     }
     public void patch(){
         prevPatch=patch;
@@ -65,10 +71,6 @@ public class VersionManager {
         System.out.println("Initial version: ");
         int major, minor, patch;
         String input=sc.nextLine();
-        if(input.equals(" ")){
-            major=-1; minor=-1; patch=-1;
-        }
-        else {
             System.out.println(input);
             String[] inputArray = new String[4];
             int index = 0;
@@ -76,12 +78,16 @@ public class VersionManager {
                 inputArray[index] = s;
                 index++;
             }
-            major = Integer.parseInt(inputArray[0]);
-            minor = Integer.parseInt(inputArray[1]);
-            patch = Integer.parseInt(inputArray[2]);
-        }
+            if(inputArray[0]!=null)
+                major = Integer.parseInt(inputArray[0]);
+            else major=-1;
+            if(inputArray[1]!=null)
+                minor = Integer.parseInt(inputArray[1]);
+            else minor=-1;
+            if(inputArray[2]!=null)
+                patch = Integer.parseInt(inputArray[2]);
+            else patch=-1;
         System.out.println("Enter commands: ");
-        //System.out.println(major+" "+minor+" "+patch);
         VersionManagerClass versions=new VersionManagerClass(major, minor, patch);
         while(sc.hasNext()){
             String command=sc.nextLine();
