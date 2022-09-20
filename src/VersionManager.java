@@ -1,5 +1,3 @@
-import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
-
 import java.util.Scanner;
 
 class VersionManagerClass{
@@ -57,7 +55,7 @@ class VersionManagerClass{
 
     }
     public String release(){
-        return (Integer.toString(major)+"."+Integer.toString(minor)+"."+Integer.toString(patch));
+        return (major+"."+minor+"."+patch);
     }
 }
 

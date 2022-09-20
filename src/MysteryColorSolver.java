@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 
 interface MysteryColorAnalyzer{
-    public int numberOfDistinctColors(List<Color> mysteryColors);
-    public int colorOccurence(List<Color> mysteryColors, Color color);
+    int numberOfDistinctColors(List<Color> mysteryColors);
+    int colorOccurrence(List<Color> mysteryColors, Color color);
 }
 
 enum Color {
@@ -34,21 +34,20 @@ class MysteryColorFinder implements MysteryColorAnalyzer{
     }
 
     @Override
-    public int colorOccurence(List<Color> mysteryColors, Color color) {
-        int countOccurence=0;
+    public int colorOccurrence(List<Color> mysteryColors, Color color) {
+        int countOccurrence=0;
         for(Color c:mysteryColors){
             if(c.equals(color))
-                countOccurence++;
+                countOccurrence++;
         }
-        return countOccurence;
+        return countOccurrence;
     }
 }
 
 public class MysteryColorSolver {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Color> mysteryColors = new ArrayList<Color>();
-        Color c;
+        List<Color> mysteryColors = new ArrayList<>();
         int n=sc.nextInt();
         for (int i=0;i<n;i++){
             String givenColor=sc.next();
@@ -61,8 +60,8 @@ public class MysteryColorSolver {
         }
         MysteryColorFinder newColorFinder = new MysteryColorFinder();
         System.out.println(newColorFinder.numberOfDistinctColors(mysteryColors));
-        System.out.println(newColorFinder.colorOccurence(mysteryColors, Color.RED));
-        System.out.println(newColorFinder.colorOccurence(mysteryColors, Color.BlUE));
-        System.out.println(newColorFinder.colorOccurence(mysteryColors, Color.GREEN));
+        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.RED));
+        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.BlUE));
+        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.GREEN));
     }
 }
