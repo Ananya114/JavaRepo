@@ -46,9 +46,9 @@ public class MysteryColorSolver {
                 mysteryColors.add(Color.GREEN);
         }
         MysteryColorFinder newColorFinder = new MysteryColorFinder();
-        System.out.println(newColorFinder.numberOfDistinctColors(mysteryColors));
-        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.RED));
-        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.BlUE));
-        System.out.println(newColorFinder.colorOccurrence(mysteryColors, Color.GREEN));
+        System.out.println("Distinct colors: "+newColorFinder.numberOfDistinctColors(mysteryColors));
+        System.out.println("RED: "+newColorFinder.colorOccurrence(mysteryColors, Color.RED));
+        System.out.println("BLUE: "+newColorFinder.colorOccurrence(mysteryColors, Color.BlUE));
+        System.out.println("GREEN: "+newColorFinder.colorOccurrence(mysteryColors, Color.GREEN));
     }
 }

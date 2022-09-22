@@ -32,12 +32,15 @@ class VersionManagerClass{
         patch=0;
     }
     public void minor(){
+        prevMajor=major;
         prevMinor=minor;
         prevPatch=patch;
         minor++;
         patch=0;
     }
     public void patch(){
+        prevMajor=major;
+        prevMinor=minor;
         prevPatch=patch;
         patch++;
     }
@@ -70,23 +73,21 @@ public class VersionManager {
         Scanner sc=new Scanner(System.in);
         System.out.println("Initial version: ");
         int major, minor, patch;
-        String input=sc.nextLine();
-            System.out.println(input);
-            String[] inputArray = new String[4];
-            int index = 0;
-            for (String s : input.split("\\.")) {
-                inputArray[index] = s;
-                index++;
-            }
-            if(inputArray[0]!=null)
+            if(sc.hasNext()) {
+                String input=sc.nextLine();
+                String[] inputArray = new String[4];
+                int index = 0;
+                for (String s : input.split("\\.")) {
+                    inputArray[index] = s;
+                    index++;
+                }
                 major = Integer.parseInt(inputArray[0]);
-            else major=-1;
-            if(inputArray[1]!=null)
                 minor = Integer.parseInt(inputArray[1]);
-            else minor=-1;
-            if(inputArray[2]!=null)
                 patch = Integer.parseInt(inputArray[2]);
-            else patch=-1;
+            }
+            else{
+                major=-1; minor=-1; patch=-1;
+            }
         System.out.println("Enter commands: ");
         VersionManagerClass versions=new VersionManagerClass(major, minor, patch);
         while(sc.hasNext()){
