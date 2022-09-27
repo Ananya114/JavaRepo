@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SocialMe - New User Registration</title>
+  <style>
+    .Register{
+    margin-left: 360px;
+    margin-right: 360px;
+    margin-top: 25px;
+    width: 500px;
+    padding: 15px;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    }
+    label{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Lucida Sans';
+    font-size: 13px;
+    margin-left: 40px;
+    }
+    h2{
+    font-family: 'Lucida Sans';
+    text-align: center;
+    font-size: 30px;
+    }
+    h3{
+    font-size: 18px;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    }
+    #FName{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    margin-left:10px;
+    width: 220px;
+    }
+    #LName{
+    padding: 8px;
+    border: none;
+    width: 220px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+    #Email{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    width: 460px;
+    }
+    #UName{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    width: 460px;
+    }
+    #DOB{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left:90px;
+    margin-bottom: 10px;
+    width: 210px;
+    }
+    #Password{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    width: 460px;
+    }
+    #Gender{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left:130px;
+    margin-bottom: 10px;
+    width: 220px;
+    }
+    #SignUpButton{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 220px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    background-color: #008000;
+    color: #FFFFFF;
+    }
+    #AlreadyHaveAccountButton{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 125px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    background-color: #D3D3D3;
+    color: #0000CD;
+    font-size: 15px;
+    font-weight: bold;
+    }
+    .SocialMe{
+    text-align:center;
+    margin-top: 20px;
+    font-family: 'Arial';
+    font-size: 50px;
+    color: #00BFFF;
+    font-weight: bold;
+    }
+  </style>
+</head>
+<div class="SocialMe">SocialMe</div><br>
+<div class="Register">
+<form id="RegisterForm">
+  <h2>Create a new Account</h2>
+  <h3>Quick and Easy</h3><br>
+  <input type="text" id="FName" placeholder="Enter first Name">
+  <input type="text" id="LName" placeholder="Enter last Name"><br>
+  <input type="text" id="UName" placeholder="Set your User Name">
+  <input type="email" id="Email" placeholder="Enter email"><br>
+  <input type="password" id="Password" placeholder="Set new password"><br>
+<label><b>Date of Birth</b></label>
+  <input type="date" id="DOB"><br>
+  <label><b>Gender</b></label>
+  <select name="Gender" id="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="button" id="SignUpButton" value="Sign up" onclick="window.location='http://localhost:63342/Demo/SocialMeUserRegistered.html'">
+  <input type="button" id="AlreadyHaveAccountButton" value="Already have an account" onclick="window.location='http://localhost:63342/Demo/SocialMeLoginPage.html'">
+</form>
+</div>
+</html>
